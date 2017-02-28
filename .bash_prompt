@@ -1,0 +1,66 @@
+#!/bin/bash
+#
+# .bash_env
+#
+# John Van Note
+# 2017-02-27
+#
+# Sets environmental variables for bash
+#
+
+DEBUG='false';
+
+# Determine terminal capabilites
+tp='tput';
+tps=$tp' setaf';
+reset=$tp' sgr0';
+if $tps 1 &> /dev/null;
+then
+    reset=$tp' sgr0';
+    #$reset;
+    #bold=$($tp bold);
+    yellow=$($tps 136);
+    orange=$($tps 166);
+    red=$($tps 124);
+    magenta=$($tps 125);
+    violet=$($tps 61);
+    blue=$($tps 33);
+    cyan=$($tps 37);
+    green=$($tps 64);
+    black=$($tps 0);
+    white=$($tps 15);
+    #$reset
+fi
+
+if [ "$DEBUG" = true ];
+then
+    tests="this is ${yellow} yellow,";
+    tests+="${orange} orange,";
+    tests+="${red} red,";
+    tests+="${magenta} magenta,";
+    tests+="${violet} violet,";
+    tests+="${blue} blue,";
+    tests+="${cyan} cyan,";
+    tests+="${green} green,";
+    tests+="${black} black, ";
+    tests+="and ${bold} bold";
+    #$reset;
+    echo $tests
+    unset tests
+fi
+
+# Prompt Statements
+PS1="";
+#PS1+="\[${reset}\]";
+PS1+="\[${blue}\]\u";
+PS1+="\[${white}\] on ";
+PS1+="\[${cyan}\]\h";
+PS1+="\[${white}\] at ";
+PS1+="\[${violet}\w";
+PS1+="\n";
+PS1+="\[${white}\] ~ ";
+export PS1;
+
+PS2="";
+PS2+="... ";
+export PS2;
