@@ -8,9 +8,10 @@
 # .bash_profile for dotfiles
 #
 
-dotfiles=( 'alias' 'ruby' )
+
+dotfiles=( 'alias' 'ruby' 'bash_prompt' )
 
 for dotfile in "${dotfiles[@]}"
 do
-    echo $dotfile
+    source ~/.$dotfile
 done
