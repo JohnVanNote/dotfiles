@@ -15,3 +15,8 @@ alias mvi='mv -i'
 ...='cd ../..'
 ....='cd ../../..'
 .....='cd ../../../..'
+
+# listing files
+l='ls -l'
+la='ls -a'
+lala='ls -lart'
