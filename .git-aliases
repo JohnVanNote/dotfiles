@@ -1,0 +1,19 @@
+# This is specifically for git aliases
+#
+# John Van Note
+# 2017-03-02
+#
+
+#
+# All Git everything
+#
+alias g='git'
+alias gs='git status'
+alias gclone='git clone'
+alias gadd='git add'
+alias gcm='git commit -m'
+alias grmt='git remote'
+alias gcbr='git checkout -b'
+alias grau='git remote add upstream'
+alias gp='git push'
+alias gconfig ='git config --list'
