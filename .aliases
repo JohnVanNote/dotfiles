@@ -4,27 +4,27 @@
 # 2017-02-26
 #
 
-#
 # Interactive mode for file location managment
-#
 alias rmi='rm -i'
 alias cpi='cp -i'
 alias mvi='mv -i' 
 
-#
 # Navigation made easy(er)
-#
 alias -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-#
-# All Git alias are locatied in .git-aliases
-#
+# Listing
+alias lsl='ls -l'
+alias lsa='ls -la'
+alias lsrt='ls -lart'
 
-#
+# All Git alias are locatied in .git-aliases
+
 # Process utils
-#
 alias psgrep='ps -ef | grep'
+
+# Utils
+alias internetapps='lsof -P -i -n | cut -f 1 -d " "| uniq | tail -n +2'
