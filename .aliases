@@ -17,9 +17,9 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # Listing
+alias l='ls -lart'
 alias lsl='ls -l'
 alias lsa='ls -la'
-alias lsrt='ls -lart'
 
 # All Git alias are locatied in .git-aliases
 
