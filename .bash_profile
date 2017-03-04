@@ -9,7 +9,7 @@
 #
 
 
-dotfiles=( 'aliases''git-aliases' 'bash_prompt' 'ruby' )
+dotfiles=( 'aliases' 'git-aliases' 'bash_prompt' 'ruby' )
 
 for dotfile in "${dotfiles[@]}"
 do
