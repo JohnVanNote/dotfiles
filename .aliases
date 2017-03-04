@@ -10,7 +10,7 @@ alias cpi='cp -i'
 alias mvi='mv -i' 
 
 # Navigation made easy(er)
-alias -='cd -'
+alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
