@@ -14,7 +14,7 @@
 VIM_HOME=$HOME/.vim
 AUTO_HOME=$VIM_HOME/autoload
 VNDL_HOME=$VIM_HOME/bundle
-SOLR_HOME=$VNDL_HOME/vim-colors-solarized
+DARK_HOME=$VNDL_HOME/vim-colors-solarized
 
 # Check for Pathogen, install if missing
 if [ ! -d $AUTO_HOME ]; then
@@ -29,6 +29,6 @@ if [ ! -d $VNDL_HOME ]; then
 fi
 
 # Check for Solarized, install if missing
-if [ ! -d $SOLR_HOME ]; then 
-    git clone https://github.com/altercation/vim-colors-solarized.git $SOLR_HOME
+if [ ! -d $DARK_HOME ]; then 
+    git clone https://github.com/altercation/vim-colors-solarized.git $DARK_HOME
 fi
