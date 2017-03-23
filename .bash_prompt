@@ -8,14 +8,15 @@
 # Sets environmental variables for bash
 #
 
+# For testing
 DEBUG='false';
 
 # Determine terminal capabilites
-tp='tput';
-tps=$tp' setaf';
-reset=$tp' sgr0';
-if $tps 1 &> /dev/null;
-then
+MACHINE=$(uname)
+
+if [[ ! $MACHINE == *'CYGWIN'* ]] ; then
+    tp='tput';
+    tps=$tp' setaf';
     reset=$tp' sgr0';
     #$reset;
     #bold=$($tp bold);
@@ -29,7 +30,32 @@ then
     green=$($tps 64);
     black=$($tps 0);
     white=$($tps 15);
-    #$reset
+
+    regc=$white;
+    userc=$blue;
+    hostc=$cyan;
+    pathc=$violet;
+    gitc=$magenta;
+    timec=$orange;
+else
+    yellow="\e[0;33m";
+    orange="\e[0;98m";
+    red="\e[0;31m";
+    magenta="\e[0;31m"; # red - placeholder
+    violet="\e[0;35m";
+    blue="\e[0;34m";
+    cyan="\e[0;36m";
+    green="\e[0;32m";
+    black="\e[0;30m";
+    white="\e[0;37m";
+    
+    regc=$white;
+    userc=$blue;
+    hostc=$cyan;
+    pathc=$violet;
+    gitc=$magenta;
+    timec=$green;
+
 fi
 
 # This is lifted from https://github.com/jessfraz/dotfiles/blob/master/.bash_prompt
@@ -87,7 +113,8 @@ prompt_git() {
 
 if [ "$DEBUG" = true ];
 then
-    tests="this is ${yellow} yellow,";
+    tests="this is "
+    tests+="${yellow} yellow,";
     tests+="${orange} orange,";
     tests+="${red} red,";
     tests+="${magenta} magenta,";
@@ -96,25 +123,24 @@ then
     tests+="${cyan} cyan,";
     tests+="${green} green,";
     tests+="${black} black, ";
-    tests+="and ${bold} bold";
-    #$reset;
-    echo $tests
+    tests+="${white} and white."
+    echo -e $tests
     unset tests
 fi
 
 # Prompt Statements
 PS1="";
 #PS1+="\[${reset}\]";
-PS1+="\[${blue}\]\u";
-PS1+="\[${white}\] at ";
-PS1+="\[${cyan}\]\h";
-PS1+="\[${white}\] in ";
-PS1+="\[${violet}\]\w";
-PS1+="\$(prompt_git \"${white} on ${magenta}\")"
-PS1+="\[${white}\] at ";
-PS1+="\[${orange}\]\d \t"
+PS1+="\[${userc}\]\u";
+PS1+="\[${regc}\] at ";
+PS1+="\[${hostc}\]\h";
+PS1+="\[${regc}\] in ";
+PS1+="\[${pathc}\]\w";
+PS1+="\$(prompt_git \"${regc} on ${gitc}\")"
+PS1+="\[${regc}\] at ";
+PS1+="\[${timec}\]\d \t"
 PS1+="\n";
-PS1+="\[${white}\] ~ ";
+PS1+="\[${regc}\] ~ ";
 export PS1;
 
 PS2="";
