@@ -8,7 +8,8 @@
 # Sets environmental variables for bash
 #
 
-DEBUG='true';
+# For testing
+DEBUG='false';
 
 # Determine terminal capabilites
 MACHINE=$(uname)
@@ -52,8 +53,8 @@ else
     userc=$blue;
     hostc=$cyan;
     pathc=$violet;
-    gitc=$green;
-    timec=$orange;
+    gitc=$magenta;
+    timec=$green;
 
 fi
 
