@@ -14,9 +14,13 @@ dotfiles=( \
     'aliases-git' \
     'bash_prompt' \
     'github' \
-    'ruby' )
+    'ruby' \
+    'specific'
+    )
 
 for dotfile in "${dotfiles[@]}"
 do
-    source ~/.$dotfile
+    if [ -f ~/.$dotfile ]; then
+        source ~/.$dotfile
+    fi
 done
