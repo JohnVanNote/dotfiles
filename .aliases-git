@@ -1,12 +1,13 @@
 # This is specifically for git aliases
 #
+# .aliases-git
+#
 # John Van Note
 # 2017-03-02
 #
 
-#
+
 # All Git everything
-#
 alias g='git'
 alias gs='git status'
 alias gclone='git clone'
@@ -18,3 +19,4 @@ alias gcbr='git checkout -b'
 alias grau='git remote add upstream'
 alias gp='git push'
 alias gconfig='git config --list'
+alias glg="git log --pretty=format:'%C(yellow)%h%C(reset) %C(blue)%an%C(reset) %C(cyan)%cr%C(reset) %s %C(green)%d%C(reset)' --graph --date-order"
