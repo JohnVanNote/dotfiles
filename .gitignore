@@ -13,3 +13,6 @@
 
 # vim dir
 .vim/
+
+# ignore vagrant file for now
+vagrant/
