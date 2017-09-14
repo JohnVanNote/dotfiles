@@ -13,7 +13,9 @@ dotfiles=( \
     'aliases' \
     'aliases-git' \
     'bash_prompt' \
+    'env_vars' \
     'globalgitconfig' \
+    'muttrc' \
     'ruby' )
 
 for dotfile in "${dotfiles[@]}"

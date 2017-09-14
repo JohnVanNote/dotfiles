@@ -48,9 +48,11 @@ set sc
 set autoindent
 set smartcase
 set ignorecase
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
+set modeline
 set backspace=indent,eol,start
 set showcmd
 set lazyredraw
