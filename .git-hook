@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# .git-hook
+#
+# John Van Note
+# 2017-03-28
+#
+# Hooks for git commits and whatnot
+#
+
+# This is stolen from:
+# https://github.com/futuregoogleceo/tools/blob/1c5190c60ba84b4dc650c952d0f79e2c11acf002/pre-commit
+if [[ `git symbolic-ref HEAD` == "refs/heads/master" ]]
+then
+    echo "Cannot commit to master"
+    echo "Stash your changes and apply them to another branch"
+    echo "git stash"
+    echo "git checkout branch [BRANCH_NAME]"
+    echo "git stash apply"
+    exit 1
+fi
