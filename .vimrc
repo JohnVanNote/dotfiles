@@ -84,6 +84,3 @@ let g:airline#extensions#tabline#tab_nr_type = 0 " tab number
 let g:airline#extensions#tmuxline#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
-
-
-

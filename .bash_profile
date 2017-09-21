@@ -13,10 +13,15 @@ dotfiles=( \
     'aliases' \
     'aliases-git' \
     'bash_prompt' \
+<<<<<<< HEAD
     'github' \
     'ruby' \
     'specific'
     )
+=======
+    'globalgitconfig' \
+    'ruby' )
+>>>>>>> 29bf5c2775c8b4751f1df8800d32e8a9791a3118
 
 for dotfile in "${dotfiles[@]}"
 do
