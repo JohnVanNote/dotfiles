@@ -14,4 +14,4 @@ link:
 	$(py) $(scripts)/link_files.py
 
 write:
-	sh $(scripts)build_vim.sh
+	sh $(scripts)/build_vim.sh
