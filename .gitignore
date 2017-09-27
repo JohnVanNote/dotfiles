@@ -8,8 +8,6 @@
 # No .swp files
 *.swp
 
-# Nothing specific
-.specific
-
 # vim dir
 /src/vim/
+/src/specific
