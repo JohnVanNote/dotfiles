@@ -12,7 +12,7 @@
 scripts=./bin
 py=python
 
-all: link write
+all: write link
 
 link:
 	$(py) $(scripts)/link_files.py
