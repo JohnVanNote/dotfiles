@@ -14,16 +14,16 @@ import glob
 import os
 
 HOME = os.environ['HOME']
-CURRDIR = os.environ['PWD']
+CURRDIR = os.environ['PWD'] + '/src'
 
 IGNORE = ['.gitignore', '.git']
 
-for fil in glob.glob(".*"):
+for fil in os.listdir(CURRDIR):
     if fil not in IGNORE:
         src = os.path.join(CURRDIR, fil)
-        dst = os.path.join(HOME, fil)
-        print src
-        print dst
+        dst = os.path.join(HOME, '.' + fil)
+        print 'Linking ' + src + ' to ' + dst
+
         try: 
             os.symlink(src, dst)
         except OSError, e:
@@ -32,3 +32,4 @@ for fil in glob.glob(".*"):
                 os.symlink(src, dst)
             else:
                 raise e
+

@@ -11,10 +11,10 @@
 
 dotfiles=( \
     'aliases' \
-    'aliases-git' \
+    'aliases_git' \
     'bash_prompt' \
     'env_vars' \
-    'globalgitconfig' \
+    'global_git_config' \
     'muttrc' \
     'ruby' )
 
