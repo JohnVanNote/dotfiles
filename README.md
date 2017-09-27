@@ -7,6 +7,7 @@ Initial attempt at a dotfile directory.
 * Git
 * Python
 * Bash
+* Mutt
 
 ## Inspiration
 * https://github.com/jessfraz/dotfiles/

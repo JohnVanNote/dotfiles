@@ -6,9 +6,13 @@
 # Make file for scripts
 #
 
+.PHONY: all link write
+.SILENT: all link write
+
 scripts=./bin
 py=python
 
+all: link write
 
 link:
 	$(py) $(scripts)/link_files.py

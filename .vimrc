@@ -48,9 +48,11 @@ set sc
 set autoindent
 set smartcase
 set ignorecase
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
+set modeline
 set backspace=indent,eol,start
 set showcmd
 set lazyredraw
@@ -84,6 +86,3 @@ let g:airline#extensions#tabline#tab_nr_type = 0 " tab number
 let g:airline#extensions#tmuxline#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
-
-
-
