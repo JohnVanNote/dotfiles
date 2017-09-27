@@ -11,7 +11,7 @@
 # - Solarized
 #
 
-VIM_HOME=$HOME/.vim
+VIM_HOME=./src/vim
 AUTO_HOME=$VIM_HOME/autoload
 VNDL_HOME=$VIM_HOME/bundle
 DARK_HOME=$VNDL_HOME/vim-colors-solarized
