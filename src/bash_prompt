@@ -39,7 +39,7 @@ if [[ ! $MACHINE == *'CYGWIN'* ]] ; then
     timec=$orange;
 else
     yellow="\e[0;33m";
-    orange="\e[0;98m";
+    orange="\e[0;33m"; # yellow - placeholder
     red="\e[0;31m";
     magenta="\e[0;31m"; # red - placeholder
     violet="\e[0;35m";
@@ -54,7 +54,7 @@ else
     hostc=$cyan;
     pathc=$violet;
     gitc=$magenta;
-    timec=$green;
+    timec=$orange;
 
 fi
 
