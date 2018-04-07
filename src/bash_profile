@@ -22,3 +22,4 @@ for dotfile in "${dotfiles[@]}"
 do
     source ~/.$dotfile
 done
+
