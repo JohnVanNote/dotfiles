@@ -14,7 +14,7 @@ import glob
 import os
 
 HOME = os.environ['HOME']
-CURRDIR = os.environ['PWD'] + '/src'
+CURRDIR = os.environ['PWD'] + '/files'
 
 IGNORE = ['.gitignore', '.git']
 

@@ -9,7 +9,7 @@
 .PHONY: all link write
 .SILENT: all link write
 
-scripts=./bin
+scripts=./src
 py=python
 
 all: write link
