@@ -22,14 +22,17 @@ for fil in os.listdir(CURRDIR):
     if fil not in IGNORE:
         src = os.path.join(CURRDIR, fil)
         dst = os.path.join(HOME, '.' + fil)
+        
         print 'Linking ' + src + ' to ' + dst
-
         try: 
             os.symlink(src, dst)
+            print 'Symlink created'
         except OSError, e:
             if e.errno == errno.EEXIST:
                 os.unlink(dst)
+                print 'Unlinking Symlink'
                 os.symlink(src, dst)
+                print 'Symlink created'
             else:
                 raise e
 
