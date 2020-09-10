@@ -19,3 +19,6 @@ link:
 
 write:
 	sh $(scripts)/build_vim.sh
+
+clean:
+	rm -rf files/vim/
