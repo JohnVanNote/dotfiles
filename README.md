@@ -11,6 +11,7 @@ The answer is no.
 * Python
 * Bash
 * Mutt
+* Solarized theme for iTerm2 https://ethanschoonover.com/solarized/
 
 ## Inspirations
 

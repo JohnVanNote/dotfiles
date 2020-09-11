@@ -9,5 +9,5 @@
 *.swp
 
 # vim dir
-/src/vim/
-/src/specific
+files/vim/
+files/specific
