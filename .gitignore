@@ -11,3 +11,5 @@
 # vim dir
 files/vim/
 files/specific
+
+.DS_Store
