@@ -14,12 +14,14 @@ dotfiles=( \
     'aliases_git' \
     'bash_prompt' \
     'env_vars' \
-    'global_git_config' \
-    'muttrc' \
-    'ruby' )
+    'global_git_config' )
 
 for dotfile in "${dotfiles[@]}"
 do
     source ~/.$dotfile
 done
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

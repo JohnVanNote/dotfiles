@@ -49,7 +49,7 @@ else
     black="\e[0;30m";
     white="\e[0;37m";
     
-    regc=$white;
+    regc=$black;
     userc=$blue;
     hostc=$cyan;
     pathc=$violet;
