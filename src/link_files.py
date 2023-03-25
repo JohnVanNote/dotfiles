@@ -11,18 +11,18 @@ IGNORE = ['.gitignore', '.git']
 
 for fil in os.listdir(CURRDIR):
     if fil not in IGNORE:
-        src = os.path.join(CURRDIR, fil)
-        dst = os.path.join(HOME, '.' + fil)
+        source = os.path.join(CURRDIR, fil)
+        destination = os.path.join(HOME, '.' + fil)
         
-        print('Linking ' + src + ' to ' + dst)
+        print('Linking ' + source + ' to ' + destination)
         try: 
-            os.symlink(src, dst)
+            os.symlink(source, destination)
             print('Symlink created')
         except OSError as e:
             if e.errno == errno.EEXIST:
-                os.unlink(dst)
+                os.unlink(destination)
                 print('Unlinking Symlink')
-                os.symlink(src, dst)
+                os.symlink(source, destination)
                 print('Symlink created')
             else:
                 raise e
