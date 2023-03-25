@@ -1,15 +1,9 @@
-# aliases
-#
-# John Van Note
-# 2017-02-26
-#
-
 # Interactive mode for file location managment
 alias rmi='rm -i'
 alias cpi='cp -i'
 alias mvi='mv -i' 
 
-# Navigation made easy(er)
+# Navigation
 alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -20,8 +14,6 @@ alias .....='cd ../../../..'
 alias l='ls -lart'
 alias lsl='ls -l'
 alias lsa='ls -la'
-
-# All Git alias are locatied in .git-aliases
 
 # Process utils
 alias psgrep='ps -ef | grep'

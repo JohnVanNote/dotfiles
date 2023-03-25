@@ -1,12 +1,3 @@
-# This is specifically for git aliases
-#
-# John Van Note
-# 2017-03-02
-#
-
-#
-# All Git everything
-#
 alias g='git'
 alias gs='git status'
 alias gclone='git clone'

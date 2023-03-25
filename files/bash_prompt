@@ -1,15 +1,4 @@
 #!/bin/bash
-#
-# .bash_prompt
-#
-# John Van Note
-# 2017-02-27
-#
-# Sets environmental variables for bash
-#
-
-# For testing
-DEBUG='false';
 
 # Determine terminal capabilites
 MACHINE=$(uname)
@@ -18,8 +7,6 @@ if [[ ! $MACHINE == *'CYGWIN'* ]] ; then
     tp='tput';
     tps=$tp' setaf';
     reset=$tp' sgr0';
-    #$reset;
-    #bold=$($tp bold);
     yellow=$($tps 136);
     orange=$($tps 166);
     red=$($tps 124);
@@ -111,24 +98,6 @@ prompt_git() {
     fi;
 }
 
-if [ "$DEBUG" = true ];
-then
-    tests="this is "
-    tests+="${yellow} yellow,";
-    tests+="${orange} orange,";
-    tests+="${red} red,";
-    tests+="${magenta} magenta,";
-    tests+="${violet} violet,";
-    tests+="${blue} blue,";
-    tests+="${cyan} cyan,";
-    tests+="${green} green,";
-    tests+="${black} black, ";
-    tests+="${white} and white."
-    echo -e $tests
-    unset tests
-fi
-
-# Prompt Statements
 PS1="";
 #PS1+="\[${reset}\]";
 PS1+="\[${userc}\]\u";
