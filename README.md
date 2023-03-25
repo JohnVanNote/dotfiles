@@ -1,8 +1,6 @@
 # Dotfiles
 
-You have to ask yourself, if you don't have a dotfiles repo, are you a real developer?
-
-The answer is no.
+👿 dot files 😈 
 
 ## Requirements
 
@@ -10,7 +8,6 @@ The answer is no.
 * Git
 * Python
 * Bash
-* Mutt
 * Solarized theme for iTerm2 https://ethanschoonover.com/solarized/
 
 ## Inspirations
