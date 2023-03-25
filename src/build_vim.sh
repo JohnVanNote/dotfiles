@@ -1,15 +1,4 @@
 #!/bin/bash
-#
-# build_vim.sh
-#
-# John Van Note
-# 2020-09-09
-#
-# Install Plugins for Vim:
-# - Pathogen
-# - Vundle
-# - Solarized
-#
 
 VIM_HOME=./files/vim
 AUTO_HOME=$VIM_HOME/autoload

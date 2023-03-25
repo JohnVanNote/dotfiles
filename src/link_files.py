@@ -1,13 +1,4 @@
 #!/usr/bin/env python
-#
-# link_files.py
-#
-# John Van Note
-# 2017-03-23
-#
-# Script to link files
-#
-
 
 import errno
 import glob
@@ -23,16 +14,16 @@ for fil in os.listdir(CURRDIR):
         src = os.path.join(CURRDIR, fil)
         dst = os.path.join(HOME, '.' + fil)
         
-        print 'Linking ' + src + ' to ' + dst
+        print('Linking ' + src + ' to ' + dst)
         try: 
             os.symlink(src, dst)
-            print 'Symlink created'
-        except OSError, e:
+            print('Symlink created')
+        except OSError as e:
             if e.errno == errno.EEXIST:
                 os.unlink(dst)
-                print 'Unlinking Symlink'
+                print('Unlinking Symlink')
                 os.symlink(src, dst)
-                print 'Symlink created'
+                print('Symlink created')
             else:
                 raise e
 
